@@ -1,0 +1,11 @@
+This is the data you submitted:
+
+<h3>Account</h3>
+<pre>
+  <%= @account_params |> Kernel.inspect(pretty: true) %>
+</pre>
+
+<h3>Workspace</h3>
+<pre>
+  <%= @workspace_params |> Kernel.inspect(pretty: true) %>
+</pre>

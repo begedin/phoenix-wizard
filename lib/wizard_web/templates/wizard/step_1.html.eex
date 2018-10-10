@@ -1,0 +1,14 @@
+<h3>Step 1: Your personal info</h3>
+<%= form_for @conn, @conn |> wizard_path(:submit_step_1), fn f -> %>
+  <div class="form-group">
+    <%= label(f, :email) %>
+    <%= text_input(f, :email, class: "form-control") %>
+  </div>
+  <div class="form-group">
+    <%= label(f, :full_name) %>
+    <%= text_input(f, :full_name, class: "form-control") %>
+  </div>
+  <div class="form-group">
+    <%= submit("Next", class: "btn btn-primary pull-right") %>
+  </div>
+<% end %>

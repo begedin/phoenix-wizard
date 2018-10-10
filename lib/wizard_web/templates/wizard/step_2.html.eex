@@ -1,0 +1,11 @@
+<h3>Step 2: Your workspace info</h3>
+<%= form_for @conn, @conn |> wizard_path(:submit_step_2), fn f -> %>
+  <div class="form-group">
+    <%= label(f, :name) %>
+    <%= text_input(f, :name, class: "form-control") %>
+  </div>
+  <div class="form-group">
+    <%= link("Back", to: @conn |> wizard_path(:step_1), class: "btn btn-default") %>
+    <%= submit("Doublecheck", class: "btn btn-success pull-right") %>
+  </div>
+<% end %>
